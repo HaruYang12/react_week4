@@ -59,7 +59,7 @@ function ProductModal({modalMode, tempProduct, isOpen, setIsOpen, getProducts}) 
         })
       }
     
-      const hadleAddImage = (e) =>{
+      const handleAddImage = (e) =>{
         const newImage = [...modalData.imagesUrl, ''];
     
         setModalData({
@@ -216,8 +216,8 @@ function ProductModal({modalMode, tempProduct, isOpen, setIsOpen, getProducts}) 
                         ))}
 
                         <div className="btn-group w-100">
-                            { modalData.imagesUrl?.length < 5 && modalData.imagesUrl[modalData.imagesUrl.length-1] !== '' && (<button onClick={handleAddImage} className="btn btn-outline-primary btn-sm w-100">新增圖片</button>)}
-                            { modalData.imagesUrl?.length > 1 && <button  onClick={hadleRemoveImage} className="btn btn-outline-danger btn-sm w-100">取消圖片</button>}
+                            { modalData.imagesUrl.length < 5 && modalData.imagesUrl[modalData.imagesUrl.length-1] !== '' && (<button onClick={handleAddImage} className="btn btn-outline-primary btn-sm w-100">新增圖片</button>)}
+                            { modalData.imagesUrl.length > 1 && <button  onClick={hadleRemoveImage} className="btn btn-outline-danger btn-sm w-100">取消圖片</button>}
                         </div>
                     </div>
                     </div>
